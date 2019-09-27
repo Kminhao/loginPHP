@@ -13,20 +13,17 @@
 <body>
     <div class="row justify-content-center mt-5">
         <div class="col-3">
+            <div class="row mt-3 mr-1 justify-content-end">
+                <a href="index.php"><button class="btn btn-primary mb-2 mr-3">Voltar</button></a>
+            </div>
             <div class="card">
-                <h5 class="card-header">Login</h5>
+                <h5 class="card-header">Recuperação de Senha</h5>
                 <div class="card-body">
                     <form action="validacao.php" method="POST">
                         <div class="form-group">
                             <label clafor="email">Email:</label>
                             <input type="email" class="form-control" name="email" placeholder="Insira seu email aqui">
                         </div>
-                        <div class="form-group">
-                                <label clafor="email">Senha:</label>
-                                <input type="password" class="form-control" name="senha" required placeholder="Insira sua senha aqui">
-                        </div>
-                            <a href="#">Esqueci minha senha</a><br>
-                            <a href="cadastro.php">Cadastre-se</a>
                         <div class="row justify-content-end mt-3 mr-1">
                             <button type="submit" required name="btnLogin" value="1" class="btn btn-primary">Acessar</button>
                         </div>

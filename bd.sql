@@ -10,3 +10,7 @@ CREATE TABLE seg.usuario(
     created_at date not null,
     deleted_at date
 );
+
+CREATE TRIGGER ins_created_at BEFORE INSERT ON seg.usuario
+    FOR EACH ROW
+        SET NEW.created_at = curdate(); 
