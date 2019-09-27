@@ -1,3 +1,6 @@
+<?php
+    session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,10 +27,18 @@
                         </div>
                         <a href="#">Esqueci minha senha</a>
                         <div class="row justify-content-end mt-3 mr-1">
-                            <button type="submit" required name="btnLogin" class="btn btn-primary">Acessar</button>
+                            <button type="submit" required name="btnLogin" value="1" class="btn btn-primary">Acessar</button>
                         </div>
                     </form>
                 </div>
+            </div>
+            <div class="row text-center">
+                <?php
+                    if(isset($_SESSION['msg'])){
+                        echo $_SESSION['msg'];
+                        unset($_SESSION['msg']);
+                    }
+                ?>
             </div>
         </div>
     </div>
