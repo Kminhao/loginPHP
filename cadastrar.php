@@ -6,7 +6,7 @@
         $nome = filter_input(INPUT_POST, 'nome', FILTER_SANITIZE_STRING);
         $dn = filter_input(INPUT_POST, 'data_nascimento', FILTER_SANITIZE_STRING);
 
-        if((!empty($usuario)) AND (!empty($senha)) AND (!empty($nome)) AND (!empty($dn))){
+        if((!empty($email)) AND (!empty($senha)) AND (!empty($nome)) AND (!empty($dn))){
             $query = "INSERT INTO usuario (nome, email, senha, data_nascimento) values ('$nome', '$email','". password_hash($senha, PASSWORD_DEFAULT). "' , '$dn')";
             $run = mysqli_query($conn, $query);
             if(!$run){

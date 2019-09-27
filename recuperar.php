@@ -16,19 +16,33 @@
             <div class="row mt-3 mr-1 justify-content-end">
                 <a href="index.php"><button class="btn btn-primary mb-2 mr-3">Voltar</button></a>
             </div>
+            
             <div class="card">
                 <h5 class="card-header">Recuperação de Senha</h5>
-                <div class="card-body">
-                    <form action="validacao.php" method="POST">
-                        <div class="form-group">
-                            <label clafor="email">Email:</label>
-                            <input type="email" class="form-control" name="email" placeholder="Insira seu email aqui">
-                        </div>
-                        <div class="row justify-content-end mt-3 mr-1">
-                            <button type="submit" required name="btnLogin" value="1" class="btn btn-primary">Acessar</button>
-                        </div>
-                    </form>
-                </div>
+                <?php
+                    if(isset($_SESSION['hash_ok'])){
+                ?>
+                    <div class="card-body">
+                            <h5>Hash enviado com sucesso!</h5>
+                    </div>
+                <?php
+                    unset($_SESSION['hash_ok']);
+                    }else{
+                ?>
+                    <div class="card-body">
+                        <form action="recuperar_senha.php" method="POST">
+                            <div class="form-group">
+                                <label clafor="email">Email:</label>
+                                <input type="email" class="form-control" name="email" placeholder="Insira seu email aqui">
+                            </div>
+                            <div class="row justify-content-end mt-3 mr-1">
+                                <button type="submit" required name="btnLogin" value="1" class="btn btn-primary">Recuperar</button>
+                            </div>
+                        </form>
+                    </div>
+                <?php
+                    }
+                ?>
             </div>
             <div class="row text-center">
                 <?php

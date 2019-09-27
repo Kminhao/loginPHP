@@ -25,7 +25,7 @@
                                 <label clafor="email">Senha:</label>
                                 <input type="password" class="form-control" name="senha" required placeholder="Insira sua senha aqui">
                         </div>
-                            <a href="#">Esqueci minha senha</a><br>
+                            <a href="recuperar.php">Esqueci minha senha</a><br>
                             <a href="cadastro.php">Cadastre-se</a>
                         <div class="row justify-content-end mt-3 mr-1">
                             <button type="submit" required name="btnLogin" value="1" class="btn btn-primary">Acessar</button>

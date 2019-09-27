@@ -6,7 +6,7 @@
     if($btnLogin){
         $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_STRING);
         $senha = filter_input(INPUT_POST, 'senha', FILTER_SANITIZE_STRING);
-        if((!empty($usuario)) AND (!empty($senha))){
+        if((!empty($email)) AND (!empty($senha))){
             $result = "SELECT * FROM usuario WHERE email = '$email' LIMIT 1";
             $resultado_usuario = mysqli_query($conn, $result);
             if($resultado_usuario){
