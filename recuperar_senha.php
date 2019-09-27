@@ -38,12 +38,4 @@
             $_SESSION['msg'] = "Preencha todos os campos";
             header("Location: recuperar.php");
         }
-        // CREATE TABLE seg.recuperacao(
-        //     id int not null auto_increment primary key,
-        //     usuario_id int not null,
-        //     recovery_hash varchar(256) not null,
-        //     created_at date not null,
-        //     foreign key(usuario_id) references usuario(id)
-        // );
-
 ?>
